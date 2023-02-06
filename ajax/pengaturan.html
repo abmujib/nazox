@@ -1,6 +1,5 @@
 <div class="page-content">
     <div class="container-fluid">
-
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -19,132 +18,168 @@
             </div>
         </div>
         <!-- end page title -->
-
         <div class="row">
             <div class="col-xl-12">
+                <!-- Start Template Halaman Pengaturan -->
                 <div class="card">
                     <div class="card-body">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#database" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-database"></i></span>
-                                    <span class="d-none d-sm-block">Database</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#aplikasi" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-cube"></i></span>
-                                    <span class="d-none d-sm-block">Aplikasi</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content p-3 text-muted">
-                            <div class="tab-pane active" id="database" role="tabpanel">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Backup Database</h4>
-                                        <p class="card-title-desc">Proses Unduh ini akan mengunduh keseluruhan database
-                                            PBB
-                                            anda, format file (.sql)
-                                        </p>
-                                        <div class="input-group">
-                                            <a class="btn btn-primary waves-effect waves-light" href="#"
-                                                toggle="modal-form"><i class="fas fa-cloud-download-alt"></i> Unduh
-                                                Database</a>
-                                        </div>
-                                        <p class="card-title-desc">
-                                        <ul>
-                                            <li>Usahakan untuk melakukan backup secara rutin dan terjadwal.</li>
-                                            <li>Backup yang dihasilkan sebaiknya disimpan di komputer terpisah dari
-                                                server
-                                                yang
-                                                digunakan.</li>
-                                        </ul>
-                                        </p>
+                        <div class="product-desc">
+                            <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="database-tab" data-bs-toggle="tab" href="#database"
+                                        role="tab" aria-selected="true">Database</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="aplikasi-tab" data-bs-toggle="tab" href="#aplikasi"
+                                        role="tab" aria-selected="false">Aplikasi</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content border border-top-0 p-4">
+                                <div class="tab-pane fade active show" id="database" role="tabpanel">
+                                    <h4 class="card-title">Backup Database</h4>
+                                    <p class="card-title-desc">Proses Unduh ini akan mengunduh keseluruhan database
+                                        PBB anda, format file (.sql)
+                                    </p>
+                                    <div class="input-group">
+                                        <a class="btn btn-primary waves-effect waves-light" href="#"
+                                            toggle="modal-form"><i class="fas fa-cloud-download-alt"></i>
+                                            Unduh Database</a>
+                                    </div>
+                                    <p class="card-title-desc">
+                                    <ul>
+                                        <li>Usahakan untuk melakukan backup secara rutin dan terjadwal.</li>
+                                        <li>Backup yang dihasilkan sebaiknya disimpan di komputer terpisah dari
+                                            server yang digunakan.</li>
+                                    </ul>
+                                    </p>
+                                    <hr>
+                                    <h4 class="card-title mt-4">Restore Database</h4>
+                                    <p class="card-title-desc">
+                                        Backup yang dibuat dapat dipergunakan untuk
+                                        mengembalikan database PBB anda apabila ada masalah. Klik tombol
+                                        Restore di bawah untuk menggantikan keseluruhan database PBB dengan data
+                                        hasil backup terdahulu.
+                                    </p>
+                                    <p class="card-title-desc">
+                                        Proses ini akan membutuhkan waktu beberapa menit, menyesuaikan
+                                        dengan spesifikasi komputer server PBB dan sambungan internet yang tersedia.
+                                    </p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="customFile">
+                                        <a class="btn btn-primary waves-effect waves-light" href="#"
+                                            toggle="modal-form"><i class="fas fa-redo"></i> Restore</a>
                                     </div>
                                     <hr>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Restore Database</h4>
-                                        <p class="card-title-desc">
-                                            Backup yang dibuat dapat dipergunakan untuk
-                                            mengembalikan database PBB anda apabila ada masalah. Klik tombol Restore di
-                                            bawah untuk menggantikan keseluruhan database PBB dengan data hasil backup
-                                            terdahulu.
-                                        </p>
-                                        <p class="card-title-desc">
-                                            Proses ini akan membutuhkan waktu beberapa menit, menyesuaikan dengan
-                                            spesifikasi komputer server PBB dan sambungan internet yang tersedia.
-                                        </p>
-                                        <div class="input-group">
-                                            <input type="file" class="form-control" id="customFile">
-                                            <a class="btn btn-primary waves-effect waves-light" href="#"
-                                                toggle="modal-form"><i class="fas fa-redo"></i> Restore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Ekpor Wajib Pajak & SPPT</h4>
-                                        <p class="card-title-desc">Proses Ekpor Data ini akan mengekpor data Wajib Pajak
-                                            dan SPPT PBB anda, format file (.xlsx)
-                                        </p>
-                                        <div class="input-group">
-                                            <a class="btn btn-primary waves-effect waves-light" href="#"
-                                                toggle="modal-form"><i class="fas fa-file-excel"></i> Ekpor
-                                                Data</a>
-                                        </div>
+                                    <h4 class="card-title mt-4">Ekpor Wajib Pajak & SPPT</h4>
+                                    <p class="card-title-desc">Proses Ekpor ini akan mengekpor data Wajib Pajak
+                                        dan SPPT PBB anda, format file (.xlsx)
+                                    </p>
+                                    <div class="input-group">
+                                        <a class="btn btn-primary waves-effect waves-light" href="#"
+                                            toggle="modal-form"><i class="fas fa-file-excel"></i> Ekpor Data</a>
                                     </div>
                                     <hr>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Impor Wajib Pajak & SPPT</h4>
-                                        <p class="card-title-desc">
-                                            Fitur ini dimaksudkan untuk memasukkan data Wajib Pajak dan data
-                                            SPPT secara
-                                            masal. <br><br>
-                                            Pastikan format data yang akan diImpor sudah sesuai dengan aturan Impor
-                                            data, contoh file dapat didownload pada tautan di bawah ini:
-                                        </p>
-                                        <p class="card-title-desc">
-                                        <div class="input-group">
-                                            <a class="btn btn-primary waves-effect waves-light" href="#"
-                                                toggle="modal-form"><i class="fas fa-file-excel"></i> Aturan dan Contoh
-                                                Format Data</a>
-                                        </div>
-                                        </p>
-                                        <p class="card-title-desc">
-                                            Proses ini akan membutuhkan waktu beberapa menit, menyesuaikan dengan
-                                            spesifikasi komputer server PBB dan sambungan internet yang tersedia.
-                                        </p>
-                                        <div class="input-group">
-                                            <input type="file" class="form-control" id="customFile">
-                                            <a class="btn btn-primary waves-effect waves-light" href="#"
-                                                toggle="modal-form"><i class="fas fa-upload"></i> Impor Data</a>
-                                        </div>
+                                    <h4 class="card-title mt-4">Impor Wajib Pajak & SPPT</h4>
+                                    <p class="card-title-desc">
+                                        Fitur ini dimaksudkan untuk memasukkan data Wajib Pajak dan data
+                                        SPPT secara
+                                        masal. <br>
+                                        Pastikan format data yang akan diImpor sudah sesuai dengan aturan Impor
+                                        data, contoh file dapat didownload pada tautan di bawah ini:
+                                    </p>
+                                    <p class="card-title-desc">
+                                    <div class="input-group">
+                                        <a class="btn btn-primary waves-effect waves-light" href="#"
+                                            toggle="modal-form"><i class="fas fa-file-excel"></i> Contoh Format
+                                            Data</a>
+                                    </div>
+                                    </p>
+                                    <p class="card-title-desc">
+                                        Proses ini akan membutuhkan waktu beberapa menit, menyesuaikan dengan
+                                        spesifikasi komputer server PBB dan sambungan internet yang tersedia.
+                                    </p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="customFile">
+                                        <a class="btn btn-primary waves-effect waves-light" href="#"
+                                            toggle="modal-form"><i class="fas fa-upload"></i> Impor Data</a>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class=" tab-pane" id="aplikasi" role="tabpanel">
-                                <h4 class="card-title">Default Tabs</h4>
-                                <p class="mb-0">
-                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                    single-origin coffee squid. Exercitation +1 labore velit, blog
-                                    sartorial PBR leggings next level wes anderson artisan four loko
-                                    farm-to-table craft beer twee. Qui photo booth letterpress,
-                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                    aesthetic magna delectus.
-                                </p>
+                                <div class="tab-pane fade" id="aplikasi" role="tabpanel">
+                                    <a class="btn btn-primary waves-effect waves-light mb-2" href="#"
+                                        toggle="modal-form"><i class="fas fa-pen"></i> Ubah</a>
+                                    <text class="blockquote-footer font-size-12 m-0">Aksi ubah dengan popup modal</text>
+                                    <div class="table-responsive">
+                                        <table class="table table-nowrap mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" style="width: 250px;">Nama Aplikasi</th>
+                                                    <td>Aplikasi Pengolahan Data Pembayaran Pajak Bumi dan Bangunan</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Singkatan Aplikasi</th>
+                                                    <td>APDP-PBB</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Pengembang</th>
+                                                    <td>Abdul Mujib</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Versi</th>
+                                                    <td>v0.1-Alpha</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Provinsi</th>
+                                                    <td>JAWA BARAT</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Kabupaten</th>
+                                                    <td>SUKABUMI</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Kecamatan</th>
+                                                    <td>PURABAYA</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Desa</th>
+                                                    <td>CITAMIANG</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Logo Aplikasi</th>
+                                                    <td>
+                                                        <div class="product-img">
+                                                            <img src="assets/images/product/img-1.png" alt="img-1"
+                                                                class="rounded avatar-lg">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
+                <!-- End Template Halaman Pengaturan -->
+                <!-- Start Template Halaman Profil -->
+                <div class="col-lg-12">
+                    <div class="card card-body text-center">
+                        <div class="product-img">
+                            <img src="assets/images/product/img-1.png" alt="img-1" class="rounded-circle avatar-lg">
+                        </div>
+                        <h4 class="card-title mt-2">NAMA KADUS</h4>
+                        <p class="card-text">Anda masuk sebagai <span class="badge rounded-pill bg-info font-size-11"><i
+                                    class="fas fa-key"></i>
+                                cisitu</span> dengan level pengguna
+                            <span class="badge rounded-pill bg-info font-size-11"><i class="fas fa-users"></i>
+                                Kepala Dusun
+                            </span>
+                        </p>
+                        <a href="#" class="btn btn-primary waves-effect waves-light"><i class="fas fa-pen"></i> Ubah</a>
+                    </div>
+                </div>
+                <!-- End Template Halaman Profil -->
             </div>
         </div>
-    </div> <!-- container-fluid -->
+    </div>
 </div>
-<!-- End Page-content -->
